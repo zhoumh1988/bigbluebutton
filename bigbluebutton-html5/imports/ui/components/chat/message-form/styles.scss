@@ -49,10 +49,8 @@
 }
 
 .input {
-  @include inputFocus(var(--color-blue-light));
-
+  /**@include inputFocus(var(--color-blue-light));**/
   flex: 1;
-  background: #fff;
   background-clip: padding-box;
   margin: 0;
   color: var(--color-text);
@@ -63,9 +61,11 @@
   border-radius: var(--border-radius);
   font-size: var(--font-size-base);
   min-height: 2.5rem;
-  max-height: 10rem;
-  border: 1px solid var(--color-gray-lighter);
-  box-shadow: 0 0 0 1px var(--color-gray-lighter);
+  height: 2.5rem;
+  opacity: 1;
+  background: #f2f2ff;
+  border-radius: 1.25rem;
+  border: none;
 
   &:disabled,
   &[disabled] {
