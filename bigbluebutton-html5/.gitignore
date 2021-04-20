@@ -4,5 +4,5 @@ node_modules/
 .meteor/dev_bundle
 tests/webdriverio/.testing-env
 
-
+package-lock.json
 .history
