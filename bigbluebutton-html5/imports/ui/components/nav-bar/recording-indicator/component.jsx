@@ -194,7 +194,7 @@ class RecordingIndicator extends PureComponent {
     return (
       <Fragment>
         {record
-          ? <span className={styles.presentationTitleSeparator} aria-hidden>|</span>
+          ? <span className={styles.presentationTitleSeparator} aria-hidden></span>
           : null}
         <div className={styles.recordingIndicator}>
           {showButton
