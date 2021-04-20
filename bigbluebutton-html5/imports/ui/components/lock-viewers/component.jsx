@@ -163,11 +163,11 @@ class LockViewersComponent extends Component {
         title={intl.formatMessage(intlMessages.lockViewersTitle)}
         contentLabel={intl.formatMessage(intlMessages.ariaModalTitle)}
       >
-          <div className={styles.description}>
-            {`${intl.formatMessage(intlMessages.lockViewersDescription)}`}
-          </div>
+        <div className={styles.description}>
+          {`${intl.formatMessage(intlMessages.lockViewersDescription)}`}
+        </div>
         <div className={styles.container}>
-          
+
 
           <div className={styles.form}>
             {/* <header className={styles.subHeader}>
