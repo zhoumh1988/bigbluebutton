@@ -75,7 +75,7 @@ class MessageListItem extends Component {
           message.text !== ''
             ? (
               <Message
-                className={(message.id ? styles.systemMessage : null)}
+                className={(message.id ? styles.systemMessage : "")}
                 key={_.uniqueId('id-')}
                 text={message.text}
                 time={message.time}
