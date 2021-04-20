@@ -160,13 +160,11 @@ class LockViewersComponent extends Component {
         onRequestClose={closeModal}
         hideBorder
         shouldShowCloseButton={false}
+        title={intl.formatMessage(intlMessages.lockViewersTitle)}
         contentLabel={intl.formatMessage(intlMessages.ariaModalTitle)}
       >
 
         <div className={styles.container}>
-          <div className={styles.header}>
-            <h2 className={styles.title}>{intl.formatMessage(intlMessages.lockViewersTitle)}</h2>
-          </div>
           <div className={styles.description}>
             {`${intl.formatMessage(intlMessages.lockViewersDescription)}`}
           </div>
@@ -360,11 +358,13 @@ class LockViewersComponent extends Component {
         <div className={styles.footer}>
           <div className={styles.actions}>
             <Button
+              className={styles.defaultBtn}
               label={intl.formatMessage(intlMessages.buttonCancel)}
               onClick={closeModal}
             />
             <Button
               color="primary"
+              className={styles.primaryBtn}
               label={intl.formatMessage(intlMessages.buttonApply)}
               onClick={() => {
                 updateLockSettings(lockSettingsProps);

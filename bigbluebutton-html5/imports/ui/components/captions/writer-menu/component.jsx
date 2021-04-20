@@ -103,6 +103,7 @@ class WriterMenu extends PureComponent {
         onRequestClose={closeModal}
         hideBorder
         contentLabel={intl.formatMessage(intlMessages.title)}
+        title={intl.formatMessage(intlMessages.title)}
       >
         <header className={styles.header}>
           <h3 className={styles.title}>

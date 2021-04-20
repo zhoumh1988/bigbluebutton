@@ -25,13 +25,31 @@
 .form {
   display: flex;
   flex-flow: column;
-  border-bottom: 1px solid var(--color-gray-lighter);
 }
 
 .container {
-  margin: 0 var(--modal-margin) var(--lg-padding-x);
+  padding: 0 2rem;
+    border-bottom: 1px solid rgba(170,170,204,0.30);;
 }
-
+.defaultBtn{
+  width: 5.75rem;
+  height: 2.5rem;
+  background: #f2f2ff;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  color: #006bff;
+  font-size: 0.875rem;
+  margin-right: 1rem;
+}
+.primaryBtn{
+  width: 5.75rem;
+  height: 2.5rem;
+  background: rgba(0,107,255,0.80);
+  border-radius: 0.25rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #fff;
+}
 .subHeader {
   display: flex;
   flex-flow: row;
@@ -44,7 +62,6 @@
 
 .modal {
   @extend .modal;
-  padding: var(--jumbo-padding-y);
 }
 
 .overlay {
@@ -52,9 +69,9 @@
 }
 
 .description {
-  text-align: center;
-  color: var(--color-gray);
-  margin-bottom: var(--jumbo-padding-y)
+  color: var(--color-gray-gray);
+  margin-bottom: var(--jumbo-padding-y);
+  font-size: 0.875rem;
 }
 
 .row {
@@ -85,7 +102,7 @@
 }
 
 .label {
-  color: var(--color-gray-label);
+  color: var(--color-gray-gray);
   font-size: var(--font-size-small);
   margin-bottom: var(--lg-padding-y);
 }
@@ -142,7 +159,7 @@
 
 .footer {
   display: flex;
-  margin: var(--sm-padding-x) var(--modal-margin) 0;
+  margin: var(--sm-padding-x) 1rem 0;
 }
 
 .actions {
@@ -157,7 +174,8 @@
 
 .toggleLabel {
   margin-right: var(--sm-padding-x);
-
+  color: var(--color-gray-gray);
+  font-size: var(--font-size-small);
   [dir="rtl"] & {
     margin: 0 0 0 var(--sm-padding-x);
   }

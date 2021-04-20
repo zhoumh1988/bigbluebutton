@@ -25,10 +25,10 @@ const PermissionsOverlay = ({ intl, closeModal }) => (
     overlayClassName={styles.overlay}
     className={styles.hint}
     onRequestClose={closeModal}
+    title={intl.formatMessage(intlMessages.title)}
     hideBorder
   >
     <div className={styles.content}>
-      { intl.formatMessage(intlMessages.title) }
       <small>
         { intl.formatMessage(intlMessages.hint) }
       </small>
