@@ -8,8 +8,8 @@ import Button from '/imports/ui/components/button/component';
 import logger from '/imports/startup/client/logger';
 import Modal from '/imports/ui/components/modal/simple/component';
 import browser from 'browser-detect';
-import VideoService from '../video-provider/service';
 import cx from 'classnames';
+import VideoService from '../video-provider/service';
 import { styles } from './styles';
 
 const CAMERA_PROFILES = Meteor.settings.public.kurento.cameraProfiles;
@@ -497,7 +497,7 @@ class VideoPreview extends Component {
     const {
       intl,
       skipVideoPreview,
-      sharedDevices
+      sharedDevices,
     } = this.props;
 
     const {
@@ -537,42 +537,43 @@ class VideoPreview extends Component {
           )
         }
         { shared
-           ? (
-             <span className={styles.label}>
-               {intl.formatMessage(intlMessages.sharedCameraLabel)}
-             </span>
-           )
-           : (
-             <span>
-               <label className={styles.label} htmlFor="setQuality">
-                 {intl.formatMessage(intlMessages.qualityLabel)}
-               </label>
-               { availableProfiles && availableProfiles.length > 0
-                 ? (
-                   <select
-                     id="setQuality"
-                     value={selectedProfile || ''}
-                     className={styles.select}
-                     onChange={this.handleSelectProfile}
-                     disabled={skipVideoPreview}
-                   >
-                     {availableProfiles.map(profile => { 
-                      const label = intlMessages[`${profile.id}`] 
+          ? (
+            <span className={styles.label}>
+              {intl.formatMessage(intlMessages.sharedCameraLabel)}
+            </span>
+          )
+          : (
+            <span>
+              <label className={styles.label} htmlFor="setQuality">
+                {intl.formatMessage(intlMessages.qualityLabel)}
+              </label>
+              { availableProfiles && availableProfiles.length > 0
+                ? (
+                  <select
+                    id="setQuality"
+                    value={selectedProfile || ''}
+                    className={styles.select}
+                    onChange={this.handleSelectProfile}
+                    disabled={skipVideoPreview}
+                  >
+                    {availableProfiles.map((profile) => {
+                      const label = intlMessages[`${profile.id}`]
                         ? intl.formatMessage(intlMessages[`${profile.id}`])
                         : profile.name;
 
                       return (
-                       <option key={profile.id} value={profile.id}>
+                        <option key={profile.id} value={profile.id}>
                           {`${label}`}
-                       </option>
-                     )})}
-                   </select>
-                 )
-                 : (
-                   <span>
-                     {intl.formatMessage(intlMessages.profileNotFoundLabel)}
-                   </span>
-                 )
+                        </option>
+                      );
+                    })}
+                  </select>
+                )
+                : (
+                  <span>
+                    {intl.formatMessage(intlMessages.profileNotFoundLabel)}
+                  </span>
+                )
                }
             </span>
           )
@@ -673,22 +674,21 @@ class VideoPreview extends Component {
             />
           </p>
         ) : null}
-        <div className={styles.title}>
-          {intl.formatMessage(intlMessages.webcamSettingsTitle)}
-        </div>
 
         {this.renderContent()}
 
         <div className={styles.footer}>
-          {hasVideoStream ?
-            (<div className={styles.extraActions}>
-              <Button
-                color="danger"
-                label={intl.formatMessage(intlMessages.stopSharingAllLabel)}
-                onClick={this.handleStopSharingAll}
-                disabled={shouldDisableButtons}
-              />
-            </div>)
+          {hasVideoStream
+            ? (
+              <div className={styles.extraActions}>
+                <Button
+                  color="danger"
+                  label={intl.formatMessage(intlMessages.stopSharingAllLabel)}
+                  onClick={this.handleStopSharingAll}
+                  disabled={shouldDisableButtons}
+                />
+              </div>
+            )
             : null
           }
           <div className={styles.actions}>
@@ -698,7 +698,7 @@ class VideoPreview extends Component {
               disabled={shouldDisableButtons}
             />
             <Button
-              color={shared ? "danger" : "primary"}
+              color={shared ? 'danger' : 'primary'}
               label={intl.formatMessage(shared ? intlMessages.stopSharingLabel : intlMessages.startSharingLabel)}
               onClick={shared ? this.handleStopSharing : this.handleStartSharing}
               disabled={isStartSharingDisabled || isStartSharingDisabled === null || shouldDisableButtons}
@@ -735,6 +735,7 @@ class VideoPreview extends Component {
         className={styles.modal}
         onRequestClose={this.handleProceed}
         hideBorder
+        title={intl.formatMessage(intlMessages.webcamSettingsTitle)}
         contentLabel={intl.formatMessage(intlMessages.webcamSettingsTitle)}
         shouldShowCloseButton={allowCloseModal}
         shouldCloseOnOverlayClick={allowCloseModal}

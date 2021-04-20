@@ -134,7 +134,7 @@
   > .message:first-child {
     margin-top: calc(var(--line-height-computed) / 4);
   }
-  >p>b{
+  >p>span>b{
     height: 3.18rem;
     line-height: 3.18rem;
     display: block;
@@ -154,14 +154,14 @@
   color: var(--color-text);
   word-wrap: break-word;
   display: block;
-  line-height: 2rem;
+  line-height: 1.4rem;
   padding: 0;
-  margin-right: 0.6rem;
   & > span {
     display: inline-block;
     background: var(--color-off-white);
-    padding: 0 .875rem;
-    border-radius: .875rem;
+    padding: 0.5rem .875rem;
+    border-radius:0  .55rem .55rem .55rem;
+    max-width: 19.5rem;
   }
 }
 
