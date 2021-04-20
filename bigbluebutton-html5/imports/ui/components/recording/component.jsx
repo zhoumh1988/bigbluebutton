@@ -27,11 +27,11 @@ const intlMessages = defineMessages({
     description: 'stop recording description',
   },
   yesLabel: {
-    id: 'app.audioModal.yes',
+    id: 'app.recording.start.label',
     description: 'label for yes button',
   },
   noLabel: {
-    id: 'app.audioModal.no',
+    id: 'app.recording.cancel.label',
     description: 'label for no button',
   },
 });
@@ -76,6 +76,7 @@ class RecordingComponent extends PureComponent {
     if (!amIModerator) return null;
     return (
       <Modal
+        title={title}
         overlayClassName={styles.overlay}
         className={styles.modal}
         onRequestClose={closeModal}
@@ -83,11 +84,11 @@ class RecordingComponent extends PureComponent {
         contentLabel={title}
       >
         <div className={styles.container}>
-          <div className={styles.header}>
+          {/* <div className={styles.header}>
             <div className={styles.title}>
               {title}
             </div>
-          </div>
+          </div> */}
           <div className={styles.description}>
             {`${intl.formatMessage(!recordingStatus
               ? intlMessages.startDescription
@@ -95,16 +96,17 @@ class RecordingComponent extends PureComponent {
           </div>
           <div className={styles.footer}>
             <Button
+              color="default"
+              label={intl.formatMessage(intlMessages.noLabel)}
+              className={styles.button}
+              onClick={closeModal}
+            />
+            <Button
               color="primary"
               className={styles.button}
               disabled={!isMeteorConnected}
               label={intl.formatMessage(intlMessages.yesLabel)}
               onClick={toggleRecording}
-            />
-            <Button
-              label={intl.formatMessage(intlMessages.noLabel)}
-              className={styles.button}
-              onClick={closeModal}
             />
           </div>
         </div>

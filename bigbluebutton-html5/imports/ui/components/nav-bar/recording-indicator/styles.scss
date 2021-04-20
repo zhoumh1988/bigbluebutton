@@ -18,7 +18,7 @@
     border: none;
     box-shadow: none;
     background-color: transparent !important;
-    color: var(--color-white) !important;
+    color: var(--color-text) !important;
   }
 
   &:hover {
@@ -35,27 +35,25 @@
 .recordingControlON {
   @extend %recordingControl;
 
-  padding: 5px;
-  background-color: var(--color-primary);
-  border: var(--border-size-large) solid var(--color-primary);
+  padding: 8px 1rem;
+  background-color: var(--color-white);
+  border: var(--border-size-large) solid var(--color-white);
 
-  &:focus {
-    background-clip: padding-box;
-    border: var(--border-size-large) solid transparent;
+  .recordingIndicatorIcon {
+    border: 2px solid rgba(255,73,73,.5) !important;
+    border-radius: 50%;
   }
 }
 
 .recordingControlOFF {
   @extend %recordingControl;
 
-  padding: 7px;
-  border: var(--border-size-small) solid var(--color-white);
-  
-  &:focus {
-    padding: 5px;
-    border: var(--border-size-large) solid var(--color-white);
-    box-shadow: none;
+  span {
+    color: var(--color-white)!important;
   }
+
+  padding: 8px 1rem;
+  border: var(--border-size-small) solid var(--color-white);
 }
 
 .presentationTitle {

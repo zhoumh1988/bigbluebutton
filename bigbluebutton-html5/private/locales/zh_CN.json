@@ -541,6 +541,8 @@
     "app.recording.resumeTitle": "恢复录制",
     "app.recording.startDescription": "稍后点击“录制”按钮可以暂停录制。",
     "app.recording.stopDescription": "确定要暂停录制吗？再次点“录制”按钮可以继续录制。",
+    "app.recording.start.label": "确认",
+    "app.recording.cancel.label": "取消",
     "app.videoPreview.cameraLabel": "摄像头",
     "app.videoPreview.profileLabel": "质量",
     "app.videoPreview.quality.hd": "高清晰度",

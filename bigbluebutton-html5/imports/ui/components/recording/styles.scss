@@ -17,7 +17,7 @@
   align-items: center;
   flex-direction: column;
   padding: 0;
-  margin-top: 0;
+  margin-top: 2rem;
   margin-right: var(--description-margin);
   margin-left: var(--description-margin);
   margin-bottom: var(--lg-padding-x);
@@ -30,10 +30,13 @@
 .button {
   padding-right: var(--jumbo-padding-y);
   padding-left: var(--jumbo-padding-y);
-  margin: 0 var(--sm-padding-x) 0 0;
 
   [dir="rtl"] & {
     margin: 0 0 0 var(--sm-padding-x);
+  }
+  & + .button {
+    margin: 0 0 0 var(--sm-padding-x);
+
   }
 }
 

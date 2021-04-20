@@ -166,9 +166,9 @@ class RecordingIndicator extends PureComponent {
         key="recording-toggle"
         onClick={recordingToggle}
         onKeyPress={recordingToggle}
-      >
-        {recordingIndicatorIcon}
-
+      > 
+      {recordingIndicatorIcon}
+      
         <div className={styles.presentationTitle}>
           {recording
             ? (
@@ -178,7 +178,7 @@ class RecordingIndicator extends PureComponent {
             ) : null
           }
           {recording
-            ? <span aria-hidden>{humanizeSeconds(time)}</span> : <span>{recordTitle}</span>}
+            ? <span aria-hidden>{title} {humanizeSeconds(time)}</span> : <span>{recordTitle}</span>}
         </div>
       </div>
     );
