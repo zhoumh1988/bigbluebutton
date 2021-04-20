@@ -99,6 +99,10 @@
   max-height: 40vh;
   justify-content: center;
   align-items: center;
+  padding-right: 2rem;
+  border-bottom: 1px solid rgba(170,170,204,0.30);
+  margin-bottom: 1rem;
+
 
   @include mq($small-only) {
     flex-direction: column;
@@ -111,6 +115,7 @@
 
 .footer {
   display: flex;
+  margin: var(--sm-padding-x) 1rem 0;
 }
 
 .header {
@@ -124,7 +129,6 @@
 }
 
 .modal {
-  padding: 1rem;
   @extend .modal;
 }
 

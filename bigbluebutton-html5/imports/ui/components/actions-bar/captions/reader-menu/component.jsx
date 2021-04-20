@@ -230,6 +230,7 @@ class ReaderMenu extends PureComponent {
         onRequestClose={closeModal}
         hideBorder
         contentLabel={intl.formatMessage(intlMessages.title)}
+        title={intl.formatMessage(intlMessages.title)}
       >
         <header className={styles.title}>
           {intl.formatMessage(intlMessages.title)}

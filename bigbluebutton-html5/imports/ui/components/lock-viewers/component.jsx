@@ -163,17 +163,17 @@ class LockViewersComponent extends Component {
         title={intl.formatMessage(intlMessages.lockViewersTitle)}
         contentLabel={intl.formatMessage(intlMessages.ariaModalTitle)}
       >
-
-        <div className={styles.container}>
           <div className={styles.description}>
             {`${intl.formatMessage(intlMessages.lockViewersDescription)}`}
           </div>
+        <div className={styles.container}>
+          
 
           <div className={styles.form}>
-            <header className={styles.subHeader}>
+            {/* <header className={styles.subHeader}>
               <div className={styles.bold}>{intl.formatMessage(intlMessages.featuresLable)}</div>
               <div className={styles.bold}>{intl.formatMessage(intlMessages.lockStatusLabel)}</div>
-            </header>
+            </header> */}
             <div className={styles.row}>
               <div className={styles.col} aria-hidden="true">
                 <div className={styles.formElement}>
@@ -358,13 +358,11 @@ class LockViewersComponent extends Component {
         <div className={styles.footer}>
           <div className={styles.actions}>
             <Button
-              className={styles.defaultBtn}
               label={intl.formatMessage(intlMessages.buttonCancel)}
               onClick={closeModal}
             />
             <Button
               color="primary"
-              className={styles.primaryBtn}
               label={intl.formatMessage(intlMessages.buttonApply)}
               onClick={() => {
                 updateLockSettings(lockSettingsProps);

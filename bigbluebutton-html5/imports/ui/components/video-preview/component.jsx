@@ -673,9 +673,6 @@ class VideoPreview extends Component {
             />
           </p>
         ) : null}
-        <div className={styles.title}>
-          {intl.formatMessage(intlMessages.webcamSettingsTitle)}
-        </div>
 
         {this.renderContent()}
 
@@ -735,6 +732,7 @@ class VideoPreview extends Component {
         className={styles.modal}
         onRequestClose={this.handleProceed}
         hideBorder
+        title={intl.formatMessage(intlMessages.webcamSettingsTitle)}
         contentLabel={intl.formatMessage(intlMessages.webcamSettingsTitle)}
         shouldShowCloseButton={allowCloseModal}
         shouldCloseOnOverlayClick={allowCloseModal}
