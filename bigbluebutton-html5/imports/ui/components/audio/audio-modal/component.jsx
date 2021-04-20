@@ -262,7 +262,7 @@ class AudioModal extends Component {
     });
 
     return joinEchoTest().then(() => {
-      //console.log(inputDeviceId, outputDeviceId);
+      // console.log(inputDeviceId, outputDeviceId);
       this.setState({
         content: 'echoTest',
         disableActions: false,
@@ -561,6 +561,9 @@ class AudioModal extends Component {
           onRequestClose={closeModal}
           hideBorder
           contentLabel={intl.formatMessage(intlMessages.ariaModalTitle)}
+          title={content
+            ? intl.formatMessage(this.contents[content].title)
+            : intl.formatMessage(intlMessages.audioChoiceLabel)}
         >
           {isIEOrEdge ? (
             <p className={cx(styles.text, styles.browserWarning)}>
@@ -574,26 +577,7 @@ class AudioModal extends Component {
               />
             </p>
           ) : null}
-          {!this.skipAudioOptions()
-            ? (
-              <header
-                data-test="audioModalHeader"
-                className={styles.header}
-              >
-                {
-                  isIOSChrome ? null
-                    : (
-                      <h3 className={styles.title}>
-                        {content
-                          ? intl.formatMessage(this.contents[content].title)
-                          : intl.formatMessage(intlMessages.audioChoiceLabel)}
-                      </h3>
-                    )
-                }
-              </header>
-            )
-            : null
-          }
+
           <div className={styles.content}>
             {this.renderContent()}
           </div>

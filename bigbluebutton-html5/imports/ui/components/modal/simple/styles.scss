@@ -7,7 +7,6 @@
   outline-style: solid;
   display: flex;
   flex-direction: column;
-  padding: calc(var(--line-height-computed) / 2) var(--line-height-computed);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
   background-color: var(--color-white) !important;
 }
@@ -22,6 +21,10 @@
 .headerNoBorder, .header {
   display: flex;
   flex-shrink: 0;
+  height: 3rem;
+  align-items: center;
+  border-bottom: 1px solid rgba(170,170,204,0.30);
+  padding: 0 1rem;
 }
 
 .header {
@@ -33,10 +36,9 @@
   @extend %text-elipsis;
   flex: 1;
   margin: 0;
-  font-weight: 400;
-  font-size: var(--font-size-large);
-  text-align: center;
-  align-self: flex-end;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #676788;
 }
 
 .dismiss {
