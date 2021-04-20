@@ -401,7 +401,7 @@
     "app.audioModal.ariaTitle": "加入音频模式",
     "app.audioModal.microphoneLabel": "麦克风",
     "app.audioModal.listenOnlyLabel": "仅聆听",
-    "app.audioModal.audioChoiceLabel": "您想怎么加入音频交流？",
+    "app.audioModal.audioChoiceLabel": "选择加入语音会议方式",
     "app.audioModal.iOSBrowser": "不支持音频/视频",
     "app.audioModal.iOSErrorDescription": "受制于苹果操作系统的局限，目前iOS里的Chrome浏览器仍无法支持音频和视频。",
     "app.audioModal.iOSErrorRecommendation": "推荐使用Safari浏览器。",

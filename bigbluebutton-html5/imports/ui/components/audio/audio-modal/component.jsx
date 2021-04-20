@@ -556,6 +556,9 @@ class AudioModal extends Component {
       <span>
         {showPermissionsOvelay ? <PermissionsOverlay closeModal={closeModal} /> : null}
         <Modal
+          title={content
+            ? intl.formatMessage(this.contents[content].title)
+            : intl.formatMessage(intlMessages.audioChoiceLabel)}
           overlayClassName={styles.overlay}
           className={styles.modal}
           onRequestClose={closeModal}
@@ -574,26 +577,6 @@ class AudioModal extends Component {
               />
             </p>
           ) : null}
-          {!this.skipAudioOptions()
-            ? (
-              <header
-                data-test="audioModalHeader"
-                className={styles.header}
-              >
-                {
-                  isIOSChrome ? null
-                    : (
-                      <h3 className={styles.title}>
-                        {content
-                          ? intl.formatMessage(this.contents[content].title)
-                          : intl.formatMessage(intlMessages.audioChoiceLabel)}
-                      </h3>
-                    )
-                }
-              </header>
-            )
-            : null
-          }
           <div className={styles.content}>
             {this.renderContent()}
           </div>
