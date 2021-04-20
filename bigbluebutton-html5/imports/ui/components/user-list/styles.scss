@@ -45,10 +45,7 @@
 %list-item {
   display: flex;
   flex-flow: row;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-radius: 5px;
   cursor: pointer;
 
   [dir="rtl"] & {
@@ -65,14 +62,20 @@
   &:hover {
     @include highContrastOutline();
     background-color: var(--list-item-bg-hover);
+    .noteTitle{
+      color: var(--color-blue);
+    }
+    color: var(--color-blue);
   }
 
   &:active,
   &:focus {
     @include highContrastOutline();
-    outline-style: solid;
     background-color: var(--list-item-bg-hover);
-    box-shadow: inset 0 0 0 var(--border-size) var(--item-focus-border), inset 1px 0 0 1px var(--item-focus-border);
+    color: var(--color-blue);
+    .noteTitle{
+      color: var(--color-blue);
+    }
   }
 }
 
@@ -134,13 +137,11 @@
 
 .smallTitle {
   font-size: 0.85rem;
-  font-weight: 600;
   text-transform: uppercase;
   padding: 0 var(--sm-padding-x);
   margin: 0 0 (var(--lg-padding-x) / 2) 0;
   color: var(--color-gray-gray);
-  font-weight: 700;
-  color: #676788;
+  font-weight: 400;
 }
 
 .userListColumn {

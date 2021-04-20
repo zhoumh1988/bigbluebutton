@@ -22,7 +22,9 @@
 .actions {
   margin-left: auto;
   margin-right: 3px;
-
+  >button:first-child{
+    margin-right: 1rem;
+  }
 
   [dir="rtl"] & {
     margin-right: auto;
