@@ -217,7 +217,7 @@
     color: $color;
     background-color: $background;
     background-clip: padding-box;
-    box-shadow: 0 0 0 var(--border-size) $border;
+    // box-shadow: 0 0 0 var(--border-size) $border;
   }
 
   &:hover,
