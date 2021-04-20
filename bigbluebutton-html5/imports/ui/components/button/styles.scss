@@ -6,9 +6,9 @@
  */
 
 :root {
-  --btn-default-color: var(--color-gray);
-  --btn-default-bg: var(--color-white);
-  --btn-default-border: var(--color-white);
+  --btn-default-color: var(--color-primary);
+  --btn-default-bg: var(--color-default);
+  --btn-default-border: var(--color-default);
 
   --btn-primary-color: var(--color-white);
   --btn-primary-bg: var(--color-primary);
@@ -28,7 +28,7 @@
 
   --btn-border-size: var(--border-size);
   --btn-border-radius: var(--border-radius);
-  --btn-font-weight: 600;
+  --btn-font-weight: 400;
   --btn-spacing: .35rem;
 
   --btn-sm-font-size: calc(var(--font-size-small) * .85);
@@ -48,7 +48,7 @@
   border: none;
   overflow: visible;
   display: inline-block;
-  border-radius: var(--border-size);
+  border-radius: var(--btn-border-radius);
   font-weight: var(--btn-font-weight);
   line-height: 1;
   text-align: center;
@@ -87,7 +87,7 @@
   &:active {
     &:focus {
       span:first-of-type::before {
-        border-radius: var(--border-size);
+        border-radius: var(--btn-border-radius);
       }
     }
   }
@@ -150,7 +150,7 @@
 
   .buttonWrapper.sm & {
     display: inline-block;
-    margin: 0 0 0var(--btn-spacing);
+    margin: 0 0 0 var(--btn-spacing);
 
     [dir="rtl"] & {
       margin:0 var(--btn-spacing) 0 0;

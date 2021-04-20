@@ -26,7 +26,7 @@ const propTypes = {
   /**
    * Defines the button color style
    * @type {("default"|"primary"|"danger"|"success")}
-   * @defaultValue 'md'
+   * @defaultValue 'default'
    */
   color: PropTypes.oneOf(COLORS),
 
