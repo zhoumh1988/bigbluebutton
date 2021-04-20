@@ -154,9 +154,10 @@ export default class MessageListItem extends PureComponent {
     return (
       <p
         ref={(ref) => { this.text = ref; }}
-        dangerouslySetInnerHTML={{ __html: text }}
         className={className}
-      />
+      >
+        <span dangerouslySetInnerHTML={{ __html: text }}></span>
+      </p>
     );
   }
 }

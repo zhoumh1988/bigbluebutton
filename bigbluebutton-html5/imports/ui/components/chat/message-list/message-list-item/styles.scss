@@ -155,9 +155,14 @@
   word-wrap: break-word;
   display: block;
   line-height: 2rem;
-  background: var(--color-off-white);
-  padding: 0 0.5rem;
+  padding: 0;
   margin-right: 0.6rem;
+  & > span {
+    display: inline-block;
+    background: var(--color-off-white);
+    padding: 0 .875rem;
+    border-radius: .875rem;
+  }
 }
 
 .hyperlink {
