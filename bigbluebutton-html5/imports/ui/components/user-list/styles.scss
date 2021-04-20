@@ -26,7 +26,7 @@
   --user-icons-color: var(--color-gray-light);
   --user-icons-color-hover: var(--color-gray);
 
-  --list-item-bg-hover: #dce4ed;
+  --list-item-bg-hover: rgba(0,107,255,0.10);
   --item-focus-border: var(--color-blue-lighter);
 }
 
@@ -138,7 +138,9 @@
   text-transform: uppercase;
   padding: 0 var(--sm-padding-x);
   margin: 0 0 (var(--lg-padding-x) / 2) 0;
-  color: var(--color-gray);
+  color: var(--color-gray-gray);
+  font-weight: 700;
+  color: #676788;
 }
 
 .userListColumn {
