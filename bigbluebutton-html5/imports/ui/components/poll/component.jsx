@@ -245,7 +245,7 @@ class Poll extends Component {
     } = this.props;
 
     return (
-      <div>
+      <div className={styles.boxContent}>
         <div className={styles.instructions}>
           {intl.formatMessage(intlMessages.activePollInstruction)}
         </div>
@@ -267,7 +267,7 @@ class Poll extends Component {
     const { customPollReq } = this.state;
 
     return (
-      <div>
+      <div className={styles.boxContent}>
         <div className={styles.instructions}>
           {intl.formatMessage(intlMessages.quickPollInstruction)}
         </div>

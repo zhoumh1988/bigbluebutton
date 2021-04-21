@@ -72,28 +72,36 @@
     width: 100%;
     margin-top: var(--sm-padding-y);
     margin-bottom: var(--sm-padding-y);
+    height: 2.5rem;
+    background-color:#f2f2ff;
+    
   }
 
   > input::placeholder {
-    color: var(--color-text);
+    color: #aaaacc;
     opacity: 1; /* Firefox */
   }
 }
 
 .header {
     position: relative;
-    top: var(--poll-header-offset);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: var(--md-padding-y);
+    border-bottom: 1px solid rgba(170,170,204,0.30);
+    height: 3.4rem;
 }
-
+.boxContent{
+  padding: 1rem;
+  padding-top: 0;
+}
 .instructions {
-    margin-top: var(--lg-padding-x);
-    margin-bottom: var(--lg-padding-x);
-    color: var(--color-text);
+  font-size: 0.875rem;
+  color: #676788;
+  line-height: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .grid {
@@ -131,12 +139,11 @@
 
 .customBtn:hover,
 .pollBtn:hover {
-    box-shadow: 0 0 0 1px var(--poll-blue);
-    background-color: var(--color-white);
-    color: var(--poll-blue);
+    background-color: var(--color-blue);
+    color: var(--color-white);
 
     > span {
-        color: var(--poll-blue);
+        color: var(--color-white);
         opacity: 1;
     }
 }
@@ -145,46 +152,41 @@
 .pollBtn {
     margin-top: var(--sm-padding-y);
     margin-bottom: var(--sm-padding-y);
-    background-color: var(--color-white);
-    box-shadow: 0 0 0 1px var(--color-gray);
-    color: var(--color-gray);
-
+    height: 2.688rem;
+    opacity: 1;
+    color: #676788;
+    background: #f2f2ff;
+    border-radius: 0.25rem;
     > span {
-        color: var(--color-gray);
+        color: var(--color-gray-gray);
     }
 
     > span:hover {
-        color: var(--poll-blue);
+        color: var(--color-white);
         opacity: 1;
     }
 }
 
 .customBtn:active,
 .pollBtn:active {
-    &:focus {
-        box-shadow: 0 0 0 1px var(--poll-blue);
-    }
 
-    background-color: var(--color-white);
-    box-shadow: 0 0 0 1px var(--poll-blue);
+    background-color: var(--color-blue);
 
     > span {
-        color: var(--poll-blue);
+        color: var(--color-white);
     }
 }
 
 .customBtn:focus,
 .pollBtn:focus {
-    background-color: var(--color-white);
-    box-shadow: 0 0 0 1px var(--poll-blue);
+    background-color: var(--color-blue);
 
     > span {
-        color: var(--poll-blue);
+        color: var(--color-white);
     }
 }
 
 .input {
-    @include inputFocus(var(--color-blue-light));
  
     &:hover,
     &:focus {
@@ -192,14 +194,16 @@
     }
 
     &:focus {
-        outline-style: solid !important;
+      background: #ffffff;
+      border: 0.063rem solid #006bff;
+      border-radius: 0.313rem;
     }
     
     margin: 0;
     color: var(--color-text);
     background: var(--color-white);
     font-size: var(--font-size-small);
-    border: 1px solid var(--color-gray-lighter);
+    border: 1px solid rgba(170,170,204,0.30);
     border-radius: var(--border-radius);
     padding: .3rem * 1 .3rem * 0.25;
     padding-left: var(--lg-padding-y);
