@@ -154,6 +154,7 @@ const ShortcutHelpComponent = (props) => {
   return (
     <Modal
       title={intl.formatMessage(intlMessages.title)}
+      hideBorder
       dismiss={{
         label: intl.formatMessage(intlMessages.closeLabel),
         description: intl.formatMessage(intlMessages.closeDesc),
@@ -165,8 +166,8 @@ const ShortcutHelpComponent = (props) => {
             <table className={styles.shortcutTable}>
               <tbody>
                 <tr>
-                  <th>{intl.formatMessage(intlMessages.comboLabel)}</th>
-                  <th>{intl.formatMessage(intlMessages.functionLabel)}</th>
+                  <th className={styles.keyCell}>{intl.formatMessage(intlMessages.comboLabel)}</th>
+                  <th className={styles.descCell}>{intl.formatMessage(intlMessages.functionLabel)}</th>
                 </tr>
                 {shortcutItems}
               </tbody>
