@@ -1,6 +1,7 @@
 import React from 'react';
 import { defineMessages, injectIntl } from 'react-intl';
 import Modal from '/imports/ui/components/modal/simple/component';
+import { styles } from './styles';
 
 const intlMessages = defineMessages({
   title: {
@@ -37,13 +38,16 @@ const intlMessages = defineMessages({
 const AboutComponent = ({ intl, clientBuild, copyright }) => (
   <Modal
     title={intl.formatMessage(intlMessages.title)}
+    hideBorder
     dismiss={{
       label: intl.formatMessage(intlMessages.dismissLabel),
       description: intl.formatMessage(intlMessages.dismissDesc),
     }}
   >
-    {`${intl.formatMessage(intlMessages.copyright)} ${copyright}`} <br />
-    {`${intl.formatMessage(intlMessages.version)} ${clientBuild}`}
+    <div className={styles.aboutContent}>
+      {`${intl.formatMessage(intlMessages.copyright)} ${copyright}`} <br />
+      {`${intl.formatMessage(intlMessages.version)} ${clientBuild}`}
+    </div>
   </Modal>
 );
 
