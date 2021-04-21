@@ -276,6 +276,7 @@ class MessageForm extends PureComponent {
         className={cx(className, styles.form)}
         onSubmit={this.handleSubmit}
       >
+        <TypingIndicatorContainer {...{ error }} />
         <div className={styles.wrapper}>
           <TextareaAutosize
             className={styles.input}
@@ -308,7 +309,6 @@ class MessageForm extends PureComponent {
             data-test="sendMessageButton"
           />
         </div>
-        <TypingIndicatorContainer {...{ error }} />
       </form>
     ) : null;
   }
