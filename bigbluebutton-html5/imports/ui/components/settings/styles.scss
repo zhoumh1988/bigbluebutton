@@ -34,6 +34,7 @@
 
   @include mq($small-only) {
     width: 100%;
+    height: auto;
     flex-flow: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -64,6 +65,7 @@
 
   @include mq($small-only) {
     max-width: 100%;
+    width: auto;
     margin: 0 var(--sm-padding-x) 0 0;
 
     &>.icon {
@@ -109,12 +111,15 @@
     box-shadow: 0 0.5rem 1rem 0 rgba(103, 103, 136, .15);
     padding: 2rem;
     background-color: var(--color-white);
+    @include mq($small-only) {
+      padding: 1rem;
+    }
   }
 
   @include mq($small-only) {
-    width: 100%;
+    width: calc(100% - 2rem);
     margin-left: 1rem;
-    margin-right: inherit;
+    margin-right: 1rem;
 
     [dir="rtl"] & {
       margin-left: inherit;

@@ -322,7 +322,7 @@ class ApplicationMenu extends BaseMenu {
             </div>
           </div>
           <hr className={styles.separator} />
-          <div className={styles.row}>
+          <div className={cx(styles.row, styles.mb)}>
             <div className={styles.col}>
               <div className={styles.formElement}>
                 <label className={styles.label}>

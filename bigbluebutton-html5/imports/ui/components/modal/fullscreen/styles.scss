@@ -38,6 +38,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include mq($small-only) {
+      width: 100%;
+      padding: 0 8px;
+    }
   }
   background-color: var(--color-white);
   box-shadow: 0 0.5rem 1rem 0 rgba(103,103,136,.4);
