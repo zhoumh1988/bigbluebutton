@@ -250,10 +250,10 @@
   }
 }
 .cancel{
-  @include button-variant(var(--btn-default-color), var(--btn-default-bg), var(--btn-primary-border));
+  @include button-variant(var(--btn-default-color), var(--btn-default-bg), var(--btn-default-border));
 }
 .default {
-  @include button-variant(var(--btn-default-color), var(--color-white), var(--btn-primary-border));
+  @include button-variant(var(--btn-default-color), var(--btn-default-bg), var(--btn-default-border));
 }
 
 .primary {
