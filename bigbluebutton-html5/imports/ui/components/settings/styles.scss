@@ -4,7 +4,7 @@
   display: flex;
   flex-flow: row;
   justify-content: flex-start;
-  width: 68.75rem;
+  width: var(--fullscreen-width);
   height: 100%;
   margin: 0 auto;
 
