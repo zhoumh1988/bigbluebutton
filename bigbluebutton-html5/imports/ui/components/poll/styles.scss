@@ -10,6 +10,10 @@
 
 .closeBtn {
     position: relative;
+    background-color: transparent;
+    &:focus {
+        background-color: transparent;
+    }
 	> i {
         color: var(--color-text);
 	}
