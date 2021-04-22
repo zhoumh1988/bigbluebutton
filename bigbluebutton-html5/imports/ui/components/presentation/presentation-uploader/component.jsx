@@ -602,7 +602,7 @@ class PresentationUploader extends Component {
                 onClick={() => this.handleRemove(item)}
               />
             )}
-            {/* <Button
+            <Button
               className={isDownloadableStyle}
               label={formattedDownloadableLabel}
               aria-label={formattedDownloadableAriaLabel}
@@ -610,7 +610,7 @@ class PresentationUploader extends Component {
               size="sm"
               icon={item.isDownloadable ? 'download' : 'download-off'}
               onClick={() => this.toggleDownloadable(item)}
-            /> */}
+            />
             <Checkbox
               ariaLabel={`${intl.formatMessage(intlMessages.setAsCurrentPresentation)} ${item.filename}`}
               checked={item.isCurrent}
