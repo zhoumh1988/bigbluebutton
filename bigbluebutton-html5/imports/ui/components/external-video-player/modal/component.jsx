@@ -101,12 +101,9 @@ class ExternalVideoModal extends Component {
         className={styles.modal}
         onRequestClose={closeModal}
         contentLabel={intl.formatMessage(intlMessages.title)}
+        title={intl.formatMessage(intlMessages.title)}
         hideBorder
       >
-        <header data-test="videoModealHeader" className={styles.header}>
-          <h3 className={styles.title}>{intl.formatMessage(intlMessages.title)}</h3>
-        </header>
-
         <div className={styles.content}>
           <div className={styles.videoUrl}>
             <label htmlFor="video-modal-input" id="video-modal-input">

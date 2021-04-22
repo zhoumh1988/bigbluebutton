@@ -693,6 +693,7 @@ class VideoPreview extends Component {
           }
           <div className={styles.actions}>
             <Button
+              color="cancel"
               label={intl.formatMessage(intlMessages.cancelLabel)}
               onClick={this.handleProceed}
               disabled={shouldDisableButtons}

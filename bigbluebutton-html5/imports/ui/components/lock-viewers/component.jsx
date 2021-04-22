@@ -358,6 +358,7 @@ class LockViewersComponent extends Component {
         <div className={styles.footer}>
           <div className={styles.actions}>
             <Button
+              color="cancel"
               label={intl.formatMessage(intlMessages.buttonCancel)}
               onClick={closeModal}
             />

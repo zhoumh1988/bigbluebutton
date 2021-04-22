@@ -105,11 +105,6 @@ class WriterMenu extends PureComponent {
         contentLabel={intl.formatMessage(intlMessages.title)}
         title={intl.formatMessage(intlMessages.title)}
       >
-        <header className={styles.header}>
-          <h3 className={styles.title}>
-            {intl.formatMessage(intlMessages.title)}
-          </h3>
-        </header>
         <div className={styles.content}>
           <label>
             {intl.formatMessage(intlMessages.subtitle)}

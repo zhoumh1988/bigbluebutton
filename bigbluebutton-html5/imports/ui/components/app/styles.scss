@@ -167,7 +167,7 @@
 .poll {
   background-color: var(--color-white);
   min-width: var(--poll-pane-min-width);
-  padding: 1rem;
+  /**padding: 1rem;**/
 }
 
 .breakoutRoom {
