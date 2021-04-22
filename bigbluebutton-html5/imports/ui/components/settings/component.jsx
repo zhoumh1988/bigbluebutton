@@ -10,7 +10,7 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 
 import { withModalMounter } from '../modal/service';
-import Icon from '../icon/component';
+import Icon from '/imports/ui/components/icon/component';
 import { styles } from './styles';
 
 const intlMessages = defineMessages({
@@ -208,7 +208,7 @@ class Settings extends Component {
     } = this.state;
     return (
       <Modal
-        title={intl.formatMessage(intlMessages.SettingsLabel)}
+        title={(<div className={styles.header}><Icon className={styles.icon} iconName="settings" /> {intl.formatMessage(intlMessages.SettingsLabel)}</div>)}
         confirm={{
           callback: () => {
             this.updateSettings(current, intl.formatMessage(intlMessages.savedAlertLabel));

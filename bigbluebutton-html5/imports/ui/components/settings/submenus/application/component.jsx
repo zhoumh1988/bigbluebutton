@@ -368,6 +368,13 @@ class ApplicationMenu extends BaseMenu {
               </div>
             </div>
           </div>
+          <div className={styles.row}>
+            <div className={styles.col}>
+              <div aria-hidden className={cx(styles.formElement, styles.pullContentCenter, styles.example)}>
+                <label className={cx(styles.label)}>示例文字ABC123</label>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

@@ -43,9 +43,11 @@ class DataSaving extends BaseMenu {
       <div>
         <div>
           <h3 className={styles.title}>{intl.formatMessage(intlMessages.dataSavingLabel)}</h3>
-          <h4 className={styles.subtitle}>{intl.formatMessage(intlMessages.dataSavingDesc)}</h4>
         </div>
         <div className={styles.form}>
+          <div className={styles.row}>
+            <h4 className={styles.subtitle}>{intl.formatMessage(intlMessages.dataSavingDesc)}</h4>
+          </div>
           <div className={styles.row}>
             <div className={styles.col} aria-hidden="true">
               <div className={styles.formElement}>
