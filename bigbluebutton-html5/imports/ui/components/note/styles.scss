@@ -3,12 +3,6 @@
 
 .note {
   background-color: var(--color-white);
-  padding:
-    var(--md-padding-x)
-    var(--md-padding-y)
-    var(--md-padding-x)
-    var(--md-padding-x);
-
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -27,11 +21,13 @@
 
 .header {
   position: relative;
-  top: var(--poll-header-offset);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  height: 3.5rem;
+  border-bottom: 1px solid rgba(170,170,204,0.30);
+  padding-left: 1rem;
 }
 
 .title {
@@ -45,7 +41,7 @@
 
 .hideBtn {
   position: relative;
-  background-color: var(--color-white);
+  background-color: transparent;
   display: block;
   margin: var(--border-size-large);
   margin-bottom: var(--border-size);
