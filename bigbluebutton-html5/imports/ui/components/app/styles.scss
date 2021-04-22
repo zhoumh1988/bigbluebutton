@@ -155,7 +155,7 @@
   }
 
   @include mq($medium-up) {
-    flex: 0 25vw;
+    flex: 0 340px;
     order: 1;
   }
 
@@ -172,7 +172,7 @@
 
 .breakoutRoom {
   height: 100%;
-  width: 20vw;
+  width: 340px;
   background-color: var(--color-white);
   @include mq($small-only) {
     width: auto;

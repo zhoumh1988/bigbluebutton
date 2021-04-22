@@ -6,7 +6,6 @@
 .panel {
   @include scrollbox-vertical();
   background-color: #fff;
-  padding: var(--md-padding-x);
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -27,16 +26,12 @@
 }
 
 .header {
-  position: relative;
-  margin: 0 auto 2rem 0;
-  padding-left: 0;
-  padding-right: inherit;
   background: none !important;
-  [dir="rtl"] & {
-    margin: 0 0 2rem auto;
-    padding-left: inherit;
-    padding-right: 0;
-  }
+  height: 3.4rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(170,170,204,0.30);
+  justify-content: start;
   
   > i  {
     color: var(--color-gray-dark);
@@ -86,6 +81,7 @@
 
 .endButton {
   padding: .5rem;
+  margin: 1rem;
   font-weight: var(--headings-font-weight) !important;
   border-radius: .2rem;
   font-size: var(--font-size-small);  
@@ -163,6 +159,7 @@
 
 .breakoutColumn {
   @extend .userListColumn;
+  padding: 1rem;
 }
 
 .breakoutScrollableList {

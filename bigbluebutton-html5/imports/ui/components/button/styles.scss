@@ -250,7 +250,10 @@
   }
 }
 .cancel{
-  @include button-variant(var(--btn-default-color), var(--btn-default-bg), var(--btn-default-border));
+  background: #f2f2ff;
+  border-radius: 0.25rem;
+  color: #006bff;
+  border: var(--border-size-large) solid transparent;
 }
 .default {
   @include button-variant(var(--btn-default-color), var(--btn-default-bg), var(--btn-default-border));

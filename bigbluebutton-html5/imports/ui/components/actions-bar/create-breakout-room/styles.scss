@@ -38,6 +38,12 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 .content {
   display: flex;
   flex-direction: column;
+  /**width: 66rem;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  box-shadow: 0rem 0.5rem 1rem 0rem rgba(103,103,136,0.15);**/
 }
 
 .labelText {
