@@ -198,6 +198,8 @@
     "app.presentationUploder.tableHeading.filename": "文件名",
     "app.presentationUploder.tableHeading.options": "选项",
     "app.presentationUploder.tableHeading.status": "状态",
+    "app.presentationUploder.isDownloadableLabel": "不允许下载演示文稿-单击可允许下载演示文稿",
+    "app.presentationUploder.isNotDownloadableLabel": "允许下载演示文稿-单击可禁止下载演示文稿",
     "app.poll.pollPaneTitle": "投票",
     "app.poll.quickPollTitle": "快速投票",
     "app.poll.hidePollDesc": "隐藏投票菜单 ",

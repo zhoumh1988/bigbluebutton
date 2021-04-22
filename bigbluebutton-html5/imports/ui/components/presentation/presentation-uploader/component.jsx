@@ -340,8 +340,8 @@ class PresentationUploader extends Component {
     const validExtentions = fileValidMimeTypes.map(fileValid => fileValid.extension);
     const [accepted, rejected] = _.partition(files
       .concat(files2), f => (
-      validMimes.includes(f.type) || validExtentions.includes(`.${f.name.split('.').pop()}`)
-    ));
+        validMimes.includes(f.type) || validExtentions.includes(`.${f.name.split('.').pop()}`)
+      ));
 
     const presentationsToUpload = accepted.map((file) => {
       const id = _.uniqueId(file.name);
@@ -573,42 +573,23 @@ class PresentationUploader extends Component {
         <td className={styles.tableItemIcon}>
           <Icon iconName="file" />
         </td>
-        {
-          isActualCurrent
-            ? (
-              <th className={styles.tableItemCurrent}>
-                <span className={styles.currentLabel}>
-                  {intl.formatMessage(intlMessages.current)}
-                </span>
-              </th>
-            )
-            : null
-        }
-        <th className={styles.tableItemName} colSpan={!isActualCurrent ? 2 : 0}>
-          <span>{item.filename}</span>
+        <th className={styles.tableItemName} colSpan={2}>
+          <span>{item.filename}
+            {
+              isActualCurrent
+                ? (
+                  <span className={styles.currentLabel}>
+                    {intl.formatMessage(intlMessages.current)}
+                  </span>
+                )
+                : null
+            }</span>
         </th>
         <td className={styles.tableItemStatus} colSpan={hasError ? 2 : 0}>
           {this.renderPresentationItemStatus(item)}
         </td>
         {hasError ? null : (
           <td className={styles.tableItemActions}>
-            <Button
-              className={isDownloadableStyle}
-              label={formattedDownloadableLabel}
-              aria-label={formattedDownloadableAriaLabel}
-              hideLabel
-              size="sm"
-              icon={item.isDownloadable ? 'download' : 'download-off'}
-              onClick={() => this.toggleDownloadable(item)}
-            />
-            <Checkbox
-              ariaLabel={`${intl.formatMessage(intlMessages.setAsCurrentPresentation)} ${item.filename}`}
-              checked={item.isCurrent}
-              className={styles.itemAction}
-              disabled={disableActions}
-              keyValue={item.id}
-              onChange={this.handleCurrentChange}
-            />
             {hideRemove ? null : (
               <Button
                 disabled={disableActions}
@@ -621,6 +602,23 @@ class PresentationUploader extends Component {
                 onClick={() => this.handleRemove(item)}
               />
             )}
+            {/* <Button
+              className={isDownloadableStyle}
+              label={formattedDownloadableLabel}
+              aria-label={formattedDownloadableAriaLabel}
+              hideLabel
+              size="sm"
+              icon={item.isDownloadable ? 'download' : 'download-off'}
+              onClick={() => this.toggleDownloadable(item)}
+            /> */}
+            <Checkbox
+              ariaLabel={`${intl.formatMessage(intlMessages.setAsCurrentPresentation)} ${item.filename}`}
+              checked={item.isCurrent}
+              className={styles.itemAction}
+              disabled={disableActions}
+              keyValue={item.id}
+              onChange={this.handleCurrentChange}
+            />
           </td>
         )}
       </tr>
@@ -733,11 +731,13 @@ class PresentationUploader extends Component {
           disabled: disableActions,
         }}
       >
-        <p>{intl.formatMessage(intlMessages.message)}</p>
-        {this.renderPresentationList()}
-        <div className={styles.dropzoneWrapper}>
-          {isMobileBrowser ? this.renderPicDropzone() : null}
-          {this.renderDropzone()}
+        <div className={styles.uploaderWrapper}>
+          <p>{intl.formatMessage(intlMessages.message)}</p>
+          {this.renderPresentationList()}
+          <div className={styles.dropzoneWrapper}>
+            {isMobileBrowser ? this.renderPicDropzone() : null}
+            {this.renderDropzone()}
+          </div>
         </div>
       </ModalFullscreen>
     );
