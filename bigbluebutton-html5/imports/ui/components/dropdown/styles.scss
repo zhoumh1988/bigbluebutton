@@ -94,6 +94,7 @@
 
   @include mq($small-only) {
     display: block;
+    background-color: var(--color-white);
   }
 }
 

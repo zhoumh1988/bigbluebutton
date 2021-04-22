@@ -162,17 +162,15 @@ const ShortcutHelpComponent = (props) => {
     >
       {!accessMod ? <p>{intl.formatMessage(intlMessages.accessKeyNotAvailable)}</p>
         : (
-          <span>
-            <table className={styles.shortcutTable}>
-              <tbody>
-                <tr>
-                  <th className={styles.keyCell}>{intl.formatMessage(intlMessages.comboLabel)}</th>
-                  <th className={styles.descCell}>{intl.formatMessage(intlMessages.functionLabel)}</th>
-                </tr>
-                {shortcutItems}
-              </tbody>
-            </table>
-          </span>
+          <table className={styles.shortcutTable}>
+            <tbody>
+              <tr>
+                <th className={styles.keyCell}>{intl.formatMessage(intlMessages.comboLabel)}</th>
+                <th className={styles.descCell}>{intl.formatMessage(intlMessages.functionLabel)}</th>
+              </tr>
+              {shortcutItems}
+            </tbody>
+          </table>
         )
       }
     </Modal>

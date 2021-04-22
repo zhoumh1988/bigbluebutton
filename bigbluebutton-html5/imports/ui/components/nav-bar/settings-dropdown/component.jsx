@@ -198,7 +198,7 @@ class SettingsDropdown extends PureComponent {
 
   renderMenuItems() {
     const {
-      intl, mountModal, amIModerator, isBreakoutRoom, isMeteorConnected,
+      intl, mountModal, amIModerator, isBreakoutRoom, isMeteorConnected, noIOSFullscreen
     } = this.props;
 
     const allowedToEndMeeting = amIModerator && !isBreakoutRoom;
@@ -239,7 +239,7 @@ class SettingsDropdown extends PureComponent {
         description={intl.formatMessage(intlMessages.aboutDesc)}
         onClick={() => mountModal(<AboutContainer />)}
       />),
-      !helpButton ? null
+      noIOSFullscreen || !helpButton ? null
         : (
           <DropdownListItem
             key="list-item-help"
@@ -250,7 +250,7 @@ class SettingsDropdown extends PureComponent {
             onClick={() => window.open(`${helpLink}`)}
           />
         ),
-      (<DropdownListItem
+      (noIOSFullscreen ? null : <DropdownListItem
         key="list-item-shortcuts"
         icon="shortcuts"
         label={intl.formatMessage(intlMessages.hotkeysLabel)}
