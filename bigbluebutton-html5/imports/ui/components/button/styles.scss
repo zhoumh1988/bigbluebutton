@@ -353,4 +353,7 @@
 .jumbo {
   font-size: var(--btn-jumbo-font-size);
   padding: var(--btn-jumbo-padding);
+  @include mq($small-only) { 
+    font-size: 1rem;
+  }
 }

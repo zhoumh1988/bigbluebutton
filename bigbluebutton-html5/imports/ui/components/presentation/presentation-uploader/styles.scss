@@ -6,6 +6,14 @@
   to { background-position: 0 0; }
 }
 
+.uploaderWrapper {
+  width: 68.75rem;
+  margin: 1.5rem auto;
+  padding: 1.5rem 2rem;
+  background-color: var(--color-white);
+  border-radius: 4px;
+}
+
 .visuallyHidden {
   position: absolute;
   overflow: hidden;
@@ -35,7 +43,6 @@
     }
 
     > tr {
-      border-bottom: 1px solid var(--color-gray-light);
 
       &:last-child {
         border-bottom: 0;
@@ -43,12 +50,12 @@
 
       &:hover,
       &:focus {
-        background-color: transparentize(#8B9AA8, .85);
+        background-color: rgba(0,107,255,0.05);
       }
 
       th,
       td {
-        padding: calc(var(--sm-padding-y) * 2) calc(var(--sm-padding-x) / 2);
+        padding: calc(var(--sm-padding-y) * 4) calc(var(--sm-padding-x) / 2);
         white-space: nowrap;
       }
 
@@ -71,11 +78,11 @@
 }
 
 .tableItemActions {
-  min-width: 68px; // size of the 2 icons (check/trash)
-  text-align: left;
+  min-width: 120px; // size of the 2 icons (check/trash)
+  text-align: right;
 
-  [dir="rtl"] & {
-    text-align: right;
+  & > button {
+    margin-right: .75rem;
   }
 }
 
@@ -171,6 +178,7 @@
   font-size: 1.35rem;
   color: var(--color-gray-light);
   padding: 0;
+  outline: none;
 
   :global(.animationsEnabled) & {
     transition: all .25s;
@@ -211,20 +219,23 @@
 
 .dropzone {
   flex: auto;
-  border: 2px dashed;
-  border-radius: var(--border-radius);
-  padding: calc(var(--lg-padding-y) * 2.5) var(--lg-padding-x);
+  border: 2px dashed rgba(170,170,204,0.5);
+  border-radius: 0.563rem;
+  padding: 2.313rem;
   text-align: center;
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-label);
   cursor: pointer;
+  background-color: rgba(242,242,255,0.6);
 }
 
 .dropzoneActive {
-  background-color: var(--color-gray-lighter);
+  background-color: rgba(0,107,255,0.1);
 }
 
 .dropzoneIcon {
-  font-size: calc(var(--font-size-large) * 3);
+  font-size: calc(var(--font-size-base) * 4);
+  color: var(--color-gray-label);
 }
 
 .dropzoneMessage {
@@ -239,16 +250,17 @@
 }
 
 .currentLabel {
-  display: inline;
-  padding: .25em .5em;
-  font-size: 75%;
-  font-weight: 700;
-  line-height: 1;
+  display: inline-block;
+  width: 34px;
+  height: 22px;
+  border-radius: .25em;
+  margin-left: 11px;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 22px;
   color: var(--color-white);
   background: var(--color-primary);
   text-align: center;
   white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: .25em;
   text-transform: uppercase;
 }
