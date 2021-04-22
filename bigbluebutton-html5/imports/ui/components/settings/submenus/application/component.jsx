@@ -331,19 +331,12 @@ class ApplicationMenu extends BaseMenu {
               </div>
             </div>
             <div className={styles.col}>
-              <div aria-hidden className={cx(styles.formElement, styles.pullContentCenter)}>
-                <label className={cx(styles.label, styles.bold)}>
-                  {`${pixelPercentage[this.state.settings.fontSize]}`}
-                </label>
-              </div>
-            </div>
-            <div className={styles.col}>
               <div className={cx(styles.formElement, styles.pullContentRight)}>
                 <div className={styles.pullContentRight}>
                   <div className={styles.col}>
                     <Button
                       onClick={() => this.handleDecreaseFontSize()}
-                      color="primary"
+                      color="default"
                       icon="substract"
                       circle
                       hideLabel
@@ -353,9 +346,16 @@ class ApplicationMenu extends BaseMenu {
                     />
                   </div>
                   <div className={styles.col}>
+                    <div aria-hidden className={cx(styles.formElement, styles.pullContentCenter)}>
+                      <label className={cx(styles.label, styles.bold)}>
+                        {`${pixelPercentage[this.state.settings.fontSize]}`}
+                      </label>
+                    </div>
+                  </div>
+                  <div className={styles.col}>
                     <Button
                       onClick={() => this.handleIncreaseFontSize()}
-                      color="primary"
+                      color="default"
                       icon="add"
                       circle
                       hideLabel
