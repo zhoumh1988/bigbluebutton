@@ -21,6 +21,9 @@
   margin-top: auto;
   margin-bottom: auto;
   padding: 2rem 6rem 4rem;
+  @include mq($small-only) {
+    padding: 1rem;
+  }
 
   .audioBtn {
     width: 15rem;
@@ -29,6 +32,10 @@
     border: 1px solid transparent;
     background-color: #f2f2ff;
     border-radius: 0.313rem;
+    @include mq($small-only) {
+      width: 6rem;
+      height: 6rem;
+    }
   }
 
   .audioBtn:first-child {
@@ -136,7 +143,8 @@
   padding: 1rem;
 
   @include mq($small-only) {
-    font-size: 2.5rem;
+    font-size: 1rem;
+    margin-top: 0;
   }
 }
 
@@ -160,6 +168,11 @@
   font-size: 1rem;
   line-height: 3rem;
   font-weight: 400;
+  @include mq($small-only) {
+    font-size: .875rem;
+    line-height: 1rem;
+    margin-top: 0;
+  }
 }
 
 .title {
@@ -179,6 +192,9 @@
   margin-top: auto;
   margin-bottom: auto;
   font-size: 2rem;
+  @include mq($small-only) { 
+    font-size: 1rem;
+  }
 }
 
 .connectingAnimation {

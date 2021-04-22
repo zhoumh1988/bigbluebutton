@@ -1,8 +1,13 @@
 @import "/imports/ui/stylesheets/variables/_all";
 
 .echoTest {
-  margin-top: auto;
-  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  & > div {
+    margin-bottom: 1rem;
+  }
 }
 
 .button {

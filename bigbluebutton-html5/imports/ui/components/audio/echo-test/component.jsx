@@ -6,6 +6,10 @@ import { defineMessages, intlShape, injectIntl } from 'react-intl';
 import { styles } from './styles';
 
 const intlMessages = defineMessages({
+  echoTestDescription: {
+    id: 'app.audioModal.echoTestDescription',
+    description: 'Title for the echo test',
+  },
   confirmLabel: {
     id: 'app.audioModal.yes',
     description: 'Hear yourself yes',
@@ -56,29 +60,32 @@ class EchoTest extends Component {
       this.setState({ disabled: true }, callback);
     };
     return (
-      <span className={styles.echoTest}>
-        <Button
-          className={styles.button}
-          label={intl.formatMessage(intlMessages.confirmLabel)}
-          aria-label={intl.formatMessage(intlMessages.confirmAriaLabel)}
-          icon="thumbs_up"
-          disabled={this.state.disabled}
-          circle
-          color="success"
-          size="jumbo"
-          onClick={disableYesButtonClicked(this.handleYes)}
-        />
-        <Button
-          className={styles.button}
-          label={intl.formatMessage(intlMessages.disconfirmLabel)}
-          aria-label={intl.formatMessage(intlMessages.disconfirmAriaLabel)}
-          icon="thumbs_down"
-          circle
-          color="danger"
-          size="jumbo"
-          onClick={this.handleNo}
-        />
-      </span>
+      <div className={styles.echoTest}>
+        <div>{intl.formatMessage(intlMessages.echoTestDescription)}</div>
+        <div>
+          <Button
+            className={styles.button}
+            label={intl.formatMessage(intlMessages.confirmLabel)}
+            aria-label={intl.formatMessage(intlMessages.confirmAriaLabel)}
+            icon="thumbs_up"
+            disabled={this.state.disabled}
+            circle
+            color="success"
+            size="jumbo"
+            onClick={disableYesButtonClicked(this.handleYes)}
+          />
+          <Button
+            className={styles.button}
+            label={intl.formatMessage(intlMessages.disconfirmLabel)}
+            aria-label={intl.formatMessage(intlMessages.disconfirmAriaLabel)}
+            icon="thumbs_down"
+            circle
+            color="danger"
+            size="jumbo"
+            onClick={this.handleNo}
+          />
+        </div>
+      </div>
     );
   }
 }
