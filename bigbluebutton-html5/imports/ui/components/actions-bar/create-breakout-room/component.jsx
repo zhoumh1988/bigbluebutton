@@ -483,15 +483,7 @@ class BreakoutRoom extends PureComponent {
               {intl.formatMessage(intlMessages.duration)}
             </p>
             <div className={styles.durationArea}>
-              <input
-                type="number"
-                className={styles.duration}
-                min="1"
-                value={durationTime}
-                onChange={this.changeDurationTime}
-                onBlur={this.blurDurationTime}
-                aria-label={intl.formatMessage(intlMessages.duration)}
-              />
+              
               <HoldButton
                 key="decrease-breakout-time"
                 exec={this.decreaseDurationTime}
@@ -511,6 +503,15 @@ class BreakoutRoom extends PureComponent {
                   size="sm"
                 />
               </HoldButton>
+              <input
+                type="number"
+                className={styles.duration}
+                min="1"
+                value={durationTime}
+                onChange={this.changeDurationTime}
+                onBlur={this.blurDurationTime}
+                aria-label={intl.formatMessage(intlMessages.duration)}
+              />
               <HoldButton
                 key="increase-breakout-time"
                 exec={this.increaseDurationTime}
@@ -530,7 +531,8 @@ class BreakoutRoom extends PureComponent {
               </HoldButton>
             </div>
           </label>
-          <Button
+        </div>
+        <Button
             label={intl.formatMessage(intlMessages.randomlyAssign)}
             className={styles.randomlyAssignBtn}
             onClick={this.onAssignRandomly}
@@ -538,7 +540,6 @@ class BreakoutRoom extends PureComponent {
             color="default"
             disabled={!numberOfRoomsIsValid}
           />
-        </div>
         <span className={!numberOfRoomsIsValid
           ? styles.withError : styles.dontShow}
         >

@@ -22,19 +22,21 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
   color: var(--color-gray-gray);
   font-size: 0.875rem;
   text-align: left;
-  line-height: 4rem;
+  line-height: 2rem;
 }
 
 .breakoutSettings {
   display: grid;
-  grid-template-columns: 2fr 2fr 1fr; 
+  grid-template-columns: 1fr 1fr 2fr;
   grid-template-rows: 1fr;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
+  margin-bottom: 1rem;
 
   @include mq($small-only) {
     grid-template-columns: 1fr ;
-    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
     flex-direction: column;
+    grid-gap: 1rem;
   }
 }
 
@@ -49,32 +51,46 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
   margin: 2rem auto;
   background: #fff;
   border-radius: 0.25rem;
+  @include mq($small-only) {
+    width:100%;
+    padding: 1rem;
+    padding-bottom: 3rem;
+  }
 }
 
 .labelText {
   color: var(--color-gray);
   white-space: nowrap;
   margin-bottom: .5rem;
+  font-size: 0.875rem;
+  color: #676788;
 }
 .duration,
 .inputRooms {
-  background-color: var(--color-white);
+  background-color: #f6f6fd;
   color: var(--color-gray);
-  border: 1px solid var(--color-gray-lighter);
+  border:none;
+  outline: none;
   border-radius: var(--border-radius);
   width: 100%;
   padding-top: .25rem;
   padding-bottom: .25rem;
-  padding: .25rem 0 .25rem .25rem;
+  padding: .25rem 0 .25rem 1rem;
 }
 
 .duration {
-  width: 50%;
+  width: 55%;
   text-align: center;
   padding: .25rem;
+  &:focus{
+    outline-color:var(--color-primary)
+  }
   &::placeholder {
     color: var(--color-gray);
     opacity: 1;
+  }
+  @include mq($small-only) {
+    width: 70%;
   }
 }
 
@@ -119,7 +135,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
   align-items: center;
   font-size: var(--font-size-small);
   & > * {
-    margin: 0 .5rem 0 0;
+    margin: 0.1rem .5rem 0 0;
 
     [dir="rtl"] & {
       margin: 0 0 0 .5rem;
@@ -153,13 +169,12 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
   height: 80%;
   min-height: 4rem;
   max-height: 8rem;
-  border: 1px solid var(--color-gray-lighter);
+  border: 1px solid rgba(170,170,204,0.50);
   border-radius: var(--border-radius); 
 }
 
 .freeJoinLabel {
   font-size: var(--font-size-small);
-  font-weight: bolder;
 }
 
 .leastOneWarn {
@@ -179,6 +194,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
   text-overflow: ellipsis;
   white-space: nowrap;
   cursor: pointer;
+  color: var(--color-gray-gray);
 
   [dir="rtl"] & {
     padding: .25rem .25rem .25rem 0;
@@ -199,12 +215,15 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 }
 
 .itemTitle {
-  color: var(--color-blue-light);
+  color: #333;
+  font-size: 1.12rem;
   margin: 0;
 }
 
 .roomItem {
   margin: 1rem 0 1rem 0;
+  background: #f6f6fd;
+  padding: 0.6rem;
 
 }
 
@@ -212,7 +231,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
   padding: 0;
   outline: none !important;
   span {
-    color: var(--color-blue-light);
+    color: var(--color-gray-gray);
   }
 }
 
@@ -347,6 +366,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
   display: flex;
   flex-direction: row;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .withError {
