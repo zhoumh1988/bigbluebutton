@@ -294,17 +294,18 @@ class UserOptions extends PureComponent {
           onClick={this.onInvitationUsers}
         />) : null
       ),
-      (amIModerator && CaptionsService.isCaptionsEnabled() && isMeteorConnected
-        ? (
-          <DropdownListItem
-            icon="closed_caption"
-            label={intl.formatMessage(intlMessages.captionsLabel)}
-            description={intl.formatMessage(intlMessages.captionsDesc)}
-            key={this.captionsId}
-            onClick={this.handleCaptionsClick}
-          />
-        )
-        : null),
+      // 注释掉编写字幕功能
+      // (amIModerator && CaptionsService.isCaptionsEnabled() && isMeteorConnected
+      //   ? (
+      //     <DropdownListItem
+      //       icon="closed_caption"
+      //       label={intl.formatMessage(intlMessages.captionsLabel)}
+      //       description={intl.formatMessage(intlMessages.captionsDesc)}
+      //       key={this.captionsId}
+      //       onClick={this.handleCaptionsClick}
+      //     />
+      //   )
+      //   : null),
     ]);
 
     return this.menuItems;
