@@ -19,7 +19,10 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 .subTitle {
   font-size: var(--font-size-base);
   text-align: justify;
-  color: var(--color-gray);
+  color: var(--color-gray-gray);
+  font-size: 0.875rem;
+  text-align: left;
+  line-height: 4rem;
 }
 
 .breakoutSettings {
