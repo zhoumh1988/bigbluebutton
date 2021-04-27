@@ -260,7 +260,7 @@ class UserOptions extends PureComponent {
       (amIModerator
         ? (
           <DropdownListItem
-            icon="download"
+            icon="savename"
             label={intl.formatMessage(intlMessages.saveUserNames)}
             key={this.saveUsersNameId}
             onClick={this.onSaveUserNames}

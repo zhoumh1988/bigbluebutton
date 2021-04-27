@@ -96,7 +96,7 @@ class ModalFullscreen extends PureComponent {
       ...otherProps
     } = this.props;
 
-    const popoutIcon = confirm.icon === 'popout_window';
+    const popoutIcon = confirm.icon === 'creatroom';
     let confirmAriaLabel = `${confirm.label || intl.formatMessage(intlMessages.modalDone)} `;
     if (popoutIcon) {
       confirmAriaLabel = `${confirmAriaLabel} ${intl.formatMessage(intlMessages.newTabLabel)}`;

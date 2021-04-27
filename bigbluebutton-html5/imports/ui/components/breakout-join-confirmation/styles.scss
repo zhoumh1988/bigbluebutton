@@ -4,6 +4,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  box-shadow: 0rem 0.5rem 1rem 0rem rgba(103,103,136,0.15);
+  width: var(--fullscreen-width);
+  margin: 2rem auto;
+  height: 13rem;
+  padding: 2rem;
+  @include mq($small-only) {
+    width:100%;
+    padding: 1rem;
+    padding-bottom: 3rem;
+  }
 }
 
 .select {

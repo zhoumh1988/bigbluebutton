@@ -10,6 +10,8 @@
     right: auto;
     border-radius: 5px;
     background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
 
     [dir="rtl"] & {
       left: auto;
@@ -18,10 +20,10 @@
     }
   }
 
-  :global(.browser-chrome) &:before,
+ /** :global(.browser-chrome) &:before,
   :global(.browser-firefox) &:before {
     padding: .45rem;
-  }
+  }**/
 
   :global(.browser-edge) &:before {
     padding-top: var(--indicator-padding-top);
@@ -41,6 +43,8 @@
     opacity: 1;
     width: 1.2rem;
     height: 1.2rem;
+    display: flex;
+    align-items: center;
   }
 
   :global(.browser-edge) &:after {

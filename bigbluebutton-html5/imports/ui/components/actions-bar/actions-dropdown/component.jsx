@@ -164,7 +164,7 @@ class ActionsDropdown extends PureComponent {
       (amIPresenter && allowExternalVideo
         ? (
           <DropdownListItem
-            icon="video"
+            icon="sharevideo"
             label={!isSharingVideo ? intl.formatMessage(intlMessages.startExternalVideoLabel)
               : intl.formatMessage(intlMessages.stopExternalVideoLabel)}
             description="External Video"

@@ -307,7 +307,7 @@ class UserDropdown extends PureComponent {
             isActionsOpen: true,
           }, Session.set('dropdownOpen', true),
         ),
-        'user',
+        'userstatus',
         'right_arrow',
       ));
     }

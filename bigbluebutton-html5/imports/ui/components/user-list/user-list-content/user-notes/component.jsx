@@ -91,7 +91,7 @@ class UserNotes extends Component {
         className={styles.listItem}
         onClick={NoteService.toggleNotePanel}
       >
-        <Icon iconName="copy" />
+        <Icon iconName="note" />
         <div aria-hidden>
           <div className={styles.noteTitle}>
             {intl.formatMessage(intlMessages.sharedNotes)}

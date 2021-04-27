@@ -198,7 +198,7 @@ class SettingsDropdown extends PureComponent {
 
   renderMenuItems() {
     const {
-      intl, mountModal, amIModerator, isBreakoutRoom, isMeteorConnected, noIOSFullscreen
+      intl, mountModal, amIModerator, isBreakoutRoom, isMeteorConnected, noIOSFullscreen,
     } = this.props;
 
     const allowedToEndMeeting = amIModerator && !isBreakoutRoom;
@@ -244,19 +244,21 @@ class SettingsDropdown extends PureComponent {
           <DropdownListItem
             key="list-item-help"
             icon="help"
-            iconRight="popout_window"
+            iconRight="creatroom"
             label={intl.formatMessage(intlMessages.helpLabel)}
             description={intl.formatMessage(intlMessages.helpDesc)}
             onClick={() => window.open(`${helpLink}`)}
           />
         ),
-      (noIOSFullscreen ? null : <DropdownListItem
-        key="list-item-shortcuts"
-        icon="shortcuts"
-        label={intl.formatMessage(intlMessages.hotkeysLabel)}
-        description={intl.formatMessage(intlMessages.hotkeysDesc)}
-        onClick={() => mountModal(<ShortcutHelpComponent />)}
-      />),
+      (noIOSFullscreen ? null : (
+        <DropdownListItem
+          key="list-item-shortcuts"
+          icon="shortcuts"
+          label={intl.formatMessage(intlMessages.hotkeysLabel)}
+          description={intl.formatMessage(intlMessages.hotkeysDesc)}
+          onClick={() => mountModal(<ShortcutHelpComponent />)}
+        />
+      )),
       (isMeteorConnected ? <DropdownListSeparator key={_.uniqueId('list-separator-')} /> : null),
       allowedToEndMeeting && isMeteorConnected
         ? (<DropdownListItem

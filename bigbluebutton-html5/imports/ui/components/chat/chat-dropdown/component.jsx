@@ -75,8 +75,8 @@ class ChatDropdown extends PureComponent {
       intl, isMeteorConnected, amIModerator, meetingIsBreakout,
     } = this.props;
 
-    const clearIcon = 'delete';
-    const saveIcon = 'download';
+    const clearIcon = 'delete_chat';
+    const saveIcon = 'save_chat';
     const copyIcon = 'copy';
 
     return _.compact([
