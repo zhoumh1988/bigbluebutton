@@ -108,7 +108,12 @@
 .ilake-creatroom:before {
   content: "\e683";
 }
-
+.ilake-chat:before {
+  content: "\e6cd";
+}
+.ilake-circle_close:before {
+  content: "\e6c0";
+}
 .ilake-send:before {
   content: "\e684";
 }
